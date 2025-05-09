@@ -77,12 +77,24 @@ export default function BreakevenROASCalculator() {
         <p><strong>Feedback:</strong> {feedback}</p>
       </div>
 
-      <button
-        onClick={handleReset}
-        style={{ width: '100%', padding: 12, fontSize: '1em', borderRadius: 8, backgroundColor: '#0070f3', color: '#fff', border: 'none', cursor: 'pointer' }}
-      >
-        Reset
-      </button>
+     <div style={{ display: 'flex', justifyContent: 'center' }}>
+  <button
+    onClick={handleReset}
+    style={{
+      width: '180px',
+      padding: 12,
+      fontSize: '1em',
+      borderRadius: 8,
+      backgroundColor: '#0070f3',
+      color: '#fff',
+      border: 'none',
+      cursor: 'pointer'
+    }}
+  >
+    Reset
+  </button>
+</div>
+
     </div>
   );
 }
