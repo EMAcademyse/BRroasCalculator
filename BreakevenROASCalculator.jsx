@@ -6,11 +6,34 @@ export default function BreakevenROASCalculator() {
   const [cog, setCog] = useState('');
 
   const breakevenRoas = price - cog > 0 ? (price / (price - cog)).toFixed(2) : 0;
+const lossFeedbacks = [
+  "🤑 Wait… you're paying people to take the product?! Bold strategy, Cotton.",
+  "📉 You've just invented reverse dropshipping. Congrats?",
+  "🫣 You're selling at a loss. Passion project or accounting error?",
+  "😅 Profit? Never heard of her.",
+  "💸 The more you sell, the more you lose — genius!",
+  "🤷 This isn’t marketing, it’s charity.",
+  "🙈 You sell it for less than it costs. Risky, but… quirky.",
+  "💀 This ROAS calculator just died a little inside.",
+  "🫠 You make money disappear faster than my paycheck.",
+  "😬 Margin? What margin?",
+  "🤦 Maybe ecom isn't your calling. Or math.",
+  "🎁 Giving away free stuff is sweet. Not for your bank account though.",
+  "🚨 This business plan would make your accountant cry.",
+  "📦 You’re basically funding every customer’s shopping spree.",
+  "👀 Are you okay? Blink twice if you're being held hostage by your pricing.",
+  "🔥 This is fire… like burning-money fire.",
+  "🥴 That’s not a strategy, that’s a write-off waiting to happen.",
+  "📉 Step 1: Lose money. Step 2: ??? Step 3: Profit!",
+  "🧾 You’re writing receipts for debt. Impressive.",
+  "🧠 Remember: sell for *more* than it costs. We believe in you."
+];
 
   let feedback = "❓ Enter your numbers above";
-  if (price > 0 && cog > price) {
-    feedback = "🤑 Wait a minute... you're selling it for less than it costs you?! Great way to lose money fast — or win hearts, maybe.";
-  }
+ if (price > 0 && cog > price) {
+  const randomIndex = Math.floor(Math.random() * lossFeedbacks.length);
+  feedback = lossFeedbacks[randomIndex];
+}
   const roasNum = parseFloat(breakevenRoas);
   if (roasNum > 0) {
     if (roasNum <= 1.35) {
