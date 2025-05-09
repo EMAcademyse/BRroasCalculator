@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 export default function BreakevenROASCalculator() {
-  const [price, setPrice] = useState(0);
-  const [cog, setCog] = useState(0);
+  const [price, setPrice] = useState('');
+  const [cog, setCog] = useState('');
 
   const breakevenRoas = price - cog > 0 ? (price / (price - cog)).toFixed(2) : 0;
 
