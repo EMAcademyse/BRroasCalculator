@@ -25,8 +25,8 @@ export default function BreakevenROASCalculator() {
   }
 
   const handleReset = () => {
-    setPrice(0);
-    setCog(0);
+    setPrice('');
+    setCog('');
   };
 
   return (
