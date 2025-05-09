@@ -44,6 +44,7 @@ export default function BreakevenROASCalculator() {
           type="number"
           value={price}
           onChange={(e) => setPrice(parseFloat(e.target.value))}
+          placeholder="ex. 28"
           style={{ width: '100%', padding: 10, fontSize: '1em', borderRadius: 8, border: '1px solid #ccc' }}
         />
       </div>
@@ -54,6 +55,7 @@ export default function BreakevenROASCalculator() {
           type="number"
           value={cog}
           onChange={(e) => setCog(parseFloat(e.target.value))}
+          placeholder="ex. 7"
           style={{ width: '100%', padding: 10, fontSize: '1em', borderRadius: 8, border: '1px solid #ccc' }}
         />
       </div>
